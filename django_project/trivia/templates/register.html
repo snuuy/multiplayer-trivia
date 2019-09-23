@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Create an account{% endblock %}
+
+{% block content %}
+
+<div class="container w-100">
+  <div class="box box-shadow bg-white rounded mx-auto mt-5" style="width:25rem;">
+    <div class="p-4">
+      <h2 class="font-weight-bold">Sign Up</h2>
+      <span style="color: #999">Create your trivia account</span>
+    </div>
+		<hr class="my-0 py-0">
+    <div class="p-4">
+      <form action="javascript:submitForm();" id="signupform">
+        <div class="form-group">
+            <input type="email" id="email" maxlength=40 class="form-control" name="email" placeholder="Email Address" required="required">
+        </div>
+        <div class="form-group">
+            <input type="text" id="username" maxlength=15 class="form-control" name="username" placeholder="Username" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" minlength=8 class="form-control" name="password" placeholder="Password" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" id="cpassword" minlength=8 class="form-control" name="confirmpass" placeholder="Confirm Password" required="required">
+        </div>
+        <div class="form-group">
+          <input type="submit" id="submit" class="btn btn-lg font-weight-bold text-white" value="Sign Up">
+        </div>
+        <div class="text-danger small" id="error-text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center m-auto text-white pt-4 h6">Already have an account? <a href="../login">Login here</a></div>
+</div>
+
+<script>
+  function submitForm() {
+    if($('#cpassword').val() != $('#password').val()) {
+      $("#cpassword").toggleClass('form-control-error')
+      setTimeout(function(){
+        $("#cpassword").toggleClass('form-control-error');
+      },200)
+    } else {
+      $.post( "../api/register/", { username: $('#username').val(), 
+                                  password: $('#password').val(), 
+                                  email: $('#email').val() })
+      .done(function(data) {
+        if(data.result != 'success') {
+          $("#username").toggleClass('form-control-error')
+          setTimeout(function(){
+            $("#username").toggleClass('form-control-error');
+            $("#error-text").html('Username is already in use.')
+          },200)
+        } else {
+          window.location.replace("../");
+        }
+      });
+    }
+  }
+</script>
+
+{% endblock %}

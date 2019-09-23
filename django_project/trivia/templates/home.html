@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Trivia{% endblock %}
+
+{% block content %}
+
+<div class="container w-100">
+  <div class="border-0 card box box-shadow bg-white rounded mx-auto mt-5" style="width:30rem;">
+    <div class="card-header p-4 border-0">
+      <h2 class="text-teal mt-2">Welcome, <b>{{ user.username }}</b></h2>
+      <div class="float-right" style="margin-top: -2.4rem">
+        <a style="color:grey; text-decoration:none" href="logout">Logout</a>
+      </div>
+    </div>
+    <div class="card-body">
+          <div class="btn-findgame p-4 text-center mb-4" onclick="window.location.href='matchmaking'">Find Game</div>
+          <table class="text-dark table table-striped">
+            <tr><td colspan=3 class="text-center">Leaderboard</td></tr>
+            <tr>
+              <th>Rank</th>
+              <th>Username</th>
+              <th>Games won</th>
+            </tr>
+            {% for u in topusers %}
+                <tr>
+                  <td>{{ forloop.counter }}</td>
+                  <td>{{ u.username }}</td>
+                  <td>{{ u.info.points }}</td>
+                </tr>
+            {% endfor %}
+          </table>
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

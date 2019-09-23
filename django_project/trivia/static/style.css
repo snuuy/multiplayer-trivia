@@ -1,0 +1,180 @@
+body,html {
+    background-color: #12aa82;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box-shadow {
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
+}
+
+.form-control{
+    color: #999 !important;
+    height: 41px;
+    background-color: #f2f2f2;
+    box-shadow: none !important;
+    border: none;
+    transition: all 500ms ease;
+}
+.form-control:focus{
+    background: #e2e2e2;
+}
+.form-control-error {
+    background-color: #ee8080 !important;
+    transition: all 150ms ease;
+}
+
+.form-control::placeholder {
+    font-size: 15px;
+    color: #999;
+}
+
+.btn {
+    background: #12aa82 !important;
+    transition: all 500ms ease;
+}
+
+.btn:hover{
+    background: #0d8164 !important;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+.text-teal {
+    color: #12aa82;
+}
+
+.btn-findgame {
+    background: #8540a0; /* Old browsers */
+    background: -moz-linear-gradient(top, #8540a0 0%, #762099 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #8540a0 0%,#762099 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #8540a0 0%,#762099 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8540a0', endColorstr='#762099',GradientType=0 ); /* IE6-9 */
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    cursor:pointer;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+
+.btn-findgame:hover {
+    background: #8540a0; 
+}
+
+.btn-findgame:active {
+    background: #762099;
+    box-shadow:none;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+}
+.lds-hourglass:after {
+content: " ";
+display: block;
+border-radius: 50%;
+width: 0;
+height: 0;
+margin: 6px;
+box-sizing: border-box;
+border: 5rem solid grey;
+border-color: #762099 transparent #12aa82 transparent;
+animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+100% {
+    transform: rotate(1800deg);
+}
+}
+
+#question {
+font-size: 1.15rem !important;
+}
+
+.choice {
+    border-radius: 25px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.oppchoice {
+    background-color: #8b9299;
+}
+
+.playerchoice {
+    background: #8540a0; /* Old browsers */
+    background: -moz-linear-gradient(top, #8540a0 0%, #762099 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #8540a0 0%,#762099 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #8540a0 0%,#762099 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8540a0', endColorstr='#762099',GradientType=0 ); /* IE6-9 */
+    cursor: pointer;
+}
+
+.playerchoice:hover {
+    background: #8540a0; 
+}
+
+.playerchoice:active {
+    background: #762099;
+    box-shadow:none;
+}
+
+.bg-red {
+    background: #aa1c0a !important;
+}
+
+.bg-green {
+    background: #048344 !important;
+}
+
+.bg-disabled {
+    background: #8b9299 !important;
+    cursor: default;
+}
+
+.bg-disabled:hover {
+    background: #8b9299 !important;
+}
+
+.bg-disabled:active {
+    background: #8b9299 !important;
+
+}
+
+.greycircle {
+    padding: 5px;
+    width: 1rem;
+    height: 1rem;
+    background: lightgrey;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.green-border {
+    border: 5px solid green;
+}
+
+.bg-yellow {
+    background: #be8f0d !important;
+}
+
+#result {
+    transition: all 200ms ease;
+}
+
+#game {
+    transition: all 200ms ease;
+}
