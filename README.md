@@ -1,8 +1,6 @@
 # Trivia
 Authenticated two player live trivia game. 
 
-Demo: https://mac1xa3.ca/e/bhatts39
-
 #### Screenshots
 ![](https://i.imgur.com/WGW4fwt.png)
 ![](https://i.imgur.com/ex7CCo3.png)
